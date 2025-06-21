@@ -1,9 +1,7 @@
-import { Server } from "http";
 import mongoose from "mongoose";
 import app from "./app";
 import "dotenv/config";
 
-let server: Server;
 const port = 5000;
 
 async function main() {
@@ -13,7 +11,7 @@ async function main() {
     );
     console.log("Connected to MongoDB using Mongoose");
 
-    server = app.listen(port, () => {
+    app.listen(port, () => {
       console.log(`Library Management app listening on port ${port}`);
     });
   } catch (error) {
