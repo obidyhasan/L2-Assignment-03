@@ -30,7 +30,7 @@ booksRouters.get(
   "/",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { filter, sortBy, sort, limit = "10" } = req.query;
+      const { filter, sortBy, sort, limit } = req.query;
 
       // Filter
       const query: any = {};
